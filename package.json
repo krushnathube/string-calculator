@@ -4,14 +4,16 @@
   "description": "Incubyte Systems - Assessment round",
   "main": "index.js",
   "scripts": {
-      "test": "jest",
-      "build": "tsc"
+    "test": "jest",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.26.0",
     "@types/jest": "^29.5.14",
+    "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
     "typescript": "^5.7.2"
