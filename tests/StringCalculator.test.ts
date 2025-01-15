@@ -34,4 +34,12 @@ describe('StringCalculator', () => {
   it('should throw an exception for negative numbers', () => {
     expect(() => calculator.add("1,-2,3,-4")).toThrow("negative numbers not allowed: -2, -4");
   });
+
+  it('should return false when not found custom dilimiter', () => {
+    expect(calculator.isCustomDilimiter("1,2")).toBe(false);
+  });
+
+  it('should return true when found custom dilimiter', () => {
+    expect(calculator.isCustomDilimiter("//;\n1;2")).toBe(true);
+  });
 });

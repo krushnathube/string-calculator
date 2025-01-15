@@ -1,9 +1,12 @@
 export class StringCalculator {
+  isCustomDilimiter(numbers: string): Boolean {
+    return numbers.startsWith("//");
+  }
   add(numbers: string): number {
     if (!numbers) return 0;
 
     let delimiter = /,|\n/;
-    if (numbers.startsWith("//")) {
+    if (this.isCustomDilimiter(numbers)) {
       const parts = numbers.split("\n");
       delimiter = new RegExp(parts[0][2]);
       numbers = parts[1];
